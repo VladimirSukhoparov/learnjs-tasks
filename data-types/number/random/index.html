@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // let min= +prompt('Введите число min = ',0);
+      // let max= +prompt('Введите число max = ',0);
+
+      function random(min, max) {
+        let rndNum = min + Math.random() * (max - min);
+        return rndNum;
+      }
+      alert(random(1, 5));
+
+      // alert(`Случайное число: ${random(min, max)}`);
+    </script>
+  </body>
+</html>

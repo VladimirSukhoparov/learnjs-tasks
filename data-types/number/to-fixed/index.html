@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      alert( 1.35.toFixed(1) ); // 1.4
+      alert( 6.35.toFixed(1) ); // 6.3 - так, потому что 
+      // во внутреннем двоичном представлении 6.35 является бесконечной двоичной дробью(6.34999999999999964473). 
+      // В данном случае число становится чуть меньше, поэтому оно округляется в меньшую сторону.
+    </script>
+  </body>
+</html>
