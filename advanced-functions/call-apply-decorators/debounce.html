@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function debounce(f, ms) {
+        let isCooldown = false;
+
+        return function () {
+          if (isCooldown) return;
+
+          f.apply(this, arguments);
+
+          isCooldown = true;
+
+          setTimeout(() => (isCooldown = false), ms);
+        };
+      }
+
+      let f = debounce(alert, 1000);
+
+      f(1); // выполняется немедленно
+      f(2); // проигнорирован
+    </script>
+  </body>
+</html>

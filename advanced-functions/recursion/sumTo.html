@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /* function sumTo(n) {
+        let sum = 0;
+        for (let i = 0; i <= n; i++) {
+          sum += i;
+        }
+        return sum;
+      } */
+
+      /* function sumTo(n) {
+       return  n == 1 ? n : n + sumTo(n - 1);
+      } */
+
+      function sumTo(n) {
+        return n == 1 ? n : (n * (n + 1)) / 2;
+      }
+
+      alert(sumTo(4));
+    </script>
+  </body>
+</html>
