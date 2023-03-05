@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ul>
+    <li>Elem</li>
+  </ul>
+  <script>
+    alert(document.body.firstElementChild.lastChild.nextSibling)  // null
+    alert(document.body.firstElementChild.children.previousSibling)  // undefined
+  </script>
+ <!--
+  Если elem – произвольный узел DOM-элемента…
+
+Правда, что elem.lastChild.nextSibling всегда равен null?  - да, null
+Правда, что elem.children[0].previousSibling всегда равен null ?  - нет, undefined
+ --> 
+</body>
+</html>

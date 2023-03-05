@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h2>Уведомление находится справа.</h2>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, iste.</p>
+
+    <script>
+      function showNotification({ top = 0, right = 0, className, html }) {
+        let notification = document.createElement("div");
+        notification.className = "notification";
+        if (className) {
+          notification.classList.add(className);
+        }
+
+        notification.style.top = top + "px";
+        notification.style.right = right + "px";
+
+        notification.innerHTML = html;
+        document.body.append(notification);
+
+        setTimeout(() => notification.remove(), 1500);
+      }
+
+      // test it
+      let i = 1;
+      setInterval(() => {
+        showNotification({
+          top: 50,
+          right: 100,
+          html: "Hello " + i++,
+          className: "welcome",
+        });
+      }, 2000);
+    </script>
+  </body>
+</html>
