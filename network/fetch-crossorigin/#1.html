@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+
+            // Например, при запросе (fetch) http://google.com с http://javascript.info/some/url заголовки выглядят так:
+            //  Accept: */*
+            // Accept-Charset: utf-8
+            // Accept-Encoding: gzip,deflate,sdch
+            // Connection: keep-alive
+            // Host: google.com
+            // Origin: http://javascript.info
+            // Referer: http://javascript.info/some/url
+
+              /* Вопросы:
+                Почему нужен Origin, если Referer содержит даже больше информации?
+                Возможно ли отсутствие Referer или Origin, или это неправильно? */
+
+                /* 
+                Нам нужен Origin, потому что иногда Referer отсутствует. Например, когда мы запрашиваем через fetch HTTP-страницу с HTTPS (менее безопасный доступ с более безопасного), то Referer нет.
+                Именно потому что Referer ненадёжен, был изобретён Origin. Браузер гарантирует наличие правильного Origin при запросах на другой источник.
+                */
+    </script>
+  </body>
+</html>
