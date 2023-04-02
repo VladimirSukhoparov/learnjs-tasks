@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let obj, method;
+
+        obj = {
+            go: function () { alert(this); }
+        };
+
+        obj.go();               // (1) [object Object] - Это обычный вызов метода объекта через точку ., и this ссылается на объект перед точкой.
+
+        (obj.go)();             // (2) [object Object] - Здесь то же самое. Круглые скобки (оператор группировки) тут не изменяют порядок выполнения операций – доступ к методу через точку в любом случае срабатывает первым.
+
+        (method = obj.go)();    // (3) undefined - Здесь мы имеем более сложный вызов (expression).method(), без передачи значения this
+
+        (obj.go || obj.stop)(); // (4) undefined - Тут похожая ситуация на случай (3) – идёт потеря значения this.
+    </script>
+</body>
+
+</html>
